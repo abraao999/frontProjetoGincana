@@ -7,15 +7,12 @@ import PropTypes from 'prop-types';
 
 import { get, shuffle } from 'lodash';
 import { Col, Row, Button } from 'react-bootstrap';
-import moment from 'moment';
 import { Container } from '../../styles/GlobalStyles';
 import { Header } from './styled';
 import axios from '../../services/axios';
 import Loading from '../../components/Loading';
 
 import 'moment/locale/pt-br';
-import CardPainelPrincipal from '../../components/CardPainelPrincipal';
-import CardEntradaSaidaPainel from '../../components/CardEntradaSaidaPainel';
 import ModalComponent from '../../components/Modal';
 import ModalAlternativa from '../../components/ModalAlternativa';
 import history from '../../services/history';
@@ -27,7 +24,6 @@ export default function PainelPergunta({ match }) {
   const [show, setShow] = useState(false);
   const [showResposta, setShowResposta] = useState(true);
   const [showAlternativa, setShowAlternativa] = useState(false);
-  const [showCliente, setShowCliente] = useState(false);
   const [showPerguntas, setShowPerguntas] = useState(true);
   const [showControle, setShowControle] = useState(false);
 

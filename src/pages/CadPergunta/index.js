@@ -6,29 +6,22 @@ import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { FaEdit, FaWindowClose } from 'react-icons/fa';
 import { get } from 'lodash';
-import { Link } from 'react-router-dom';
 import { Button, Col, Form, Row, Table } from 'react-bootstrap';
 import { Container } from '../../styles/GlobalStyles';
-import { Label, Listagem } from './styled';
+import { Listagem } from './styled';
 import axios from '../../services/axios';
-import Modal from '../../components/Modal';
 import Loading from '../../components/Loading';
 import ComboBox from '../../components/ComboBox';
 import history from '../../services/history';
 // import * as actions from '../../store/modules/auth/actions';
 
 export default function CadPerguntas({ match }) {
-  const id = get(match, 'params.id', '');
-  const [show, setShow] = useState(false);
-  const [idParaDelecao, setIdParaDelecao] = useState('');
-  const [indiceDelecao, setIndiceDelecao] = useState('');
-  const [msg, setMsg] = useState(true);
+  // const id = get(match, 'params.id', '');
+  // const [show, setShow] = useState(false);
+  // const [idParaDelecao, setIdParaDelecao] = useState('');
+  // const [indiceDelecao, setIndiceDelecao] = useState('');
+  // const [msg, setMsg] = useState(true);
 
-  const [setores, setSetores] = useState([]);
-  const [setorSeletected, setSetorSeletected] = useState(0);
-  const [comboBoxCongregacao, setComboBoxCongregacao] = useState(
-    'Selecione uma congregação'
-  );
   const [pergunta, setPergunta] = useState('');
   const [resposta, setResposta] = useState('');
   const [alternativa2, setAlternativa2] = useState('');
@@ -39,7 +32,6 @@ export default function CadPerguntas({ match }) {
 
   const [listLivros, setListLivros] = useState([]);
   const [listPerguntas, setListPerguntas] = useState([]);
-  const [departamento, setDepartamento] = useState([]);
   const [descricao, setDescricao] = useState('');
   const [titulo, setTitulo] = useState('');
   const [isLoading, setIsLoading] = useState(false);
